@@ -1,0 +1,48 @@
+{
+  "boundary_bbox": {
+    "min_lon": 120.3072325,
+    "min_lat": 31.4176866,
+    "max_lon": 120.5500302,
+    "max_lat": 31.5851588
+  },
+  "building": {
+    "raw_features": 55284,
+    "total_footprint_area_m2": 34288848.72075604,
+    "valid_height_share": 1.0,
+    "type_counts": {
+      "1": 30499,
+      "2": 13346,
+      "-1": 11439
+    }
+  },
+  "road": {
+    "raw_features": 5793,
+    "line_features": 5839,
+    "total_length_m": 2048734.8214390078
+  },
+  "land_use": {
+    "features": 2033,
+    "total_area_m2": 143398369.97278836,
+    "class_counts": {
+      "0": 690,
+      "10": 541,
+      "3": 435,
+      "1": 83,
+      "2": 76,
+      "6": 70,
+      "7": 60,
+      "4": 32,
+      "9": 23,
+      "8": 21,
+      "5": 2
+    }
+  },
+  "bus": {
+    "stops": 1733,
+    "directed_routes": 282,
+    "undirected_routes": 144,
+    "topology_edges": 973,
+    "topology_nodes": 579,
+    "directed_total_length_m": 2857622.3477966734
+  }
+}

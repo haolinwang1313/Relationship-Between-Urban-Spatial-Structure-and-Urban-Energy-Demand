@@ -1,0 +1,95 @@
+Version, 24.1;
+
+Timestep, 4;
+
+SimulationControl,
+  No,
+  No,
+  No,
+  Yes,
+  Yes;
+
+RunPeriod,
+  Annual,
+  1,
+  1,
+  ,
+  12,
+  31,
+  ,
+  Sunday,
+  Yes,
+  Yes,
+  No,
+  Yes,
+  Yes,
+  No;
+
+Site:Location,
+  Wuxi_CN,
+  31.55,
+  120.35,
+  5.0,
+  8.0;
+
+Site:GroundTemperature:BuildingSurface,
+  18,18,18,18,18,18,18,18,18,18,18,18;
+
+Building,
+  Prototype,
+  30.0,
+  City,
+  0.04,
+  0.30,
+  FullExterior,
+  25.0;
+
+GlobalGeometryRules,
+  LowerLeftCorner,
+  Counterclockwise,
+  Relative,
+  Relative,
+  Relative;
+
+HeatBalanceAlgorithm, ConductionTransferFunction;
+
+SurfaceConvectionAlgorithm:Inside, TARP;
+
+SurfaceConvectionAlgorithm:Outside, DOE-2;
+
+OutputControl:Table:Style, Comma;
+
+Output:SQLite, SimpleAndTabular;
+
+Output:VariableDictionary, IDF;
+
+Output:Diagnostics,
+  DisplayAdvancedReportVariables;
+
+ScheduleTypeLimits,
+  Fraction,
+  0.0,
+  1.0,
+  Continuous;
+
+ScheduleTypeLimits,
+  Temperature,
+  -60,
+  80,
+  Continuous;
+
+ScheduleTypeLimits,
+  Any Number;
+
+ScheduleTypeLimits,
+  Control Type,
+  0,
+  4,
+  Discrete;
+
+Schedule:Compact,
+  AlwaysOn,
+  Fraction,
+  Through: 12/31,
+  For: AllDays,
+  Until: 24:00,1.0;

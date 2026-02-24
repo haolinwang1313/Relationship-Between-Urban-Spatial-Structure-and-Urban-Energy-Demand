@@ -1,0 +1,100 @@
+{
+  "default_prototype": "residential_highrise",
+  "type_mapping": {
+    "1": "residential_lowrise",
+    "2": "residential_highrise"
+  },
+  "land_class_mapping": {
+    "0": "residential_lowrise",
+    "1": "office",
+    "2": "retail",
+    "3": "industrial",
+    "7": "education"
+  },
+  "prototypes": {
+    "residential_lowrise": {
+      "description": "1-3 层住宅或联排住宅",
+      "schedule_key": "residential",
+      "wwr": 0.25,
+      "wall_u": 0.65,
+      "roof_u": 0.55,
+      "window_u": 3.2,
+      "people_per_m2": 0.04,
+      "lights_w_per_m2": 6.0,
+      "equipment_w_per_m2": 4.0,
+      "infiltration_ach": 0.6,
+      "cooling_cop": 3.0,
+      "heating_cop": 3.2
+    },
+    "residential_highrise": {
+      "description": "4 层及以上高层住宅/公寓",
+      "schedule_key": "residential",
+      "wwr": 0.35,
+      "wall_u": 0.55,
+      "roof_u": 0.45,
+      "window_u": 2.8,
+      "people_per_m2": 0.03,
+      "lights_w_per_m2": 7.5,
+      "equipment_w_per_m2": 5.5,
+      "infiltration_ach": 0.5,
+      "cooling_cop": 3.3,
+      "heating_cop": 3.0
+    },
+    "office": {
+      "description": "办公/研发用房",
+      "schedule_key": "office",
+      "wwr": 0.45,
+      "wall_u": 0.45,
+      "roof_u": 0.35,
+      "window_u": 2.4,
+      "people_per_m2": 0.06,
+      "lights_w_per_m2": 11.5,
+      "equipment_w_per_m2": 15.0,
+      "infiltration_ach": 0.4,
+      "cooling_cop": 4.0,
+      "heating_cop": 2.8
+    },
+    "retail": {
+      "description": "商业/零售",
+      "schedule_key": "retail",
+      "wwr": 0.4,
+      "wall_u": 0.5,
+      "roof_u": 0.4,
+      "window_u": 2.6,
+      "people_per_m2": 0.09,
+      "lights_w_per_m2": 15.0,
+      "equipment_w_per_m2": 12.0,
+      "infiltration_ach": 0.55,
+      "cooling_cop": 3.4,
+      "heating_cop": 2.6
+    },
+    "education": {
+      "description": "教育/科研设施",
+      "schedule_key": "education",
+      "wwr": 0.35,
+      "wall_u": 0.45,
+      "roof_u": 0.35,
+      "window_u": 2.4,
+      "people_per_m2": 0.05,
+      "lights_w_per_m2": 10.0,
+      "equipment_w_per_m2": 6.0,
+      "infiltration_ach": 0.5,
+      "cooling_cop": 3.6,
+      "heating_cop": 2.7
+    },
+    "industrial": {
+      "description": "轻工/厂房（假定 24h 低占用）",
+      "schedule_key": "industrial",
+      "wwr": 0.2,
+      "wall_u": 0.6,
+      "roof_u": 0.45,
+      "window_u": 3.5,
+      "people_per_m2": 0.02,
+      "lights_w_per_m2": 8.0,
+      "equipment_w_per_m2": 20.0,
+      "infiltration_ach": 0.8,
+      "cooling_cop": 3.2,
+      "heating_cop": 2.4
+    }
+  }
+}

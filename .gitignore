@@ -1,0 +1,135 @@
+# ------------------------------
+# Python / local environments
+# ------------------------------
+.venv/
+.venv_*/
+.venv_geo/
+venv/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# ------------------------------
+# IDE / system junk
+# ------------------------------
+.vscode/
+.idea/
+.local/
+.DS_Store
+
+# ------------------------------
+# Logs / temp / caches
+# ------------------------------
+cache/
+logs/
+work_logs/
+worklogs/
+*.log
+*.tmp
+*.bak
+temp*/
+
+# ------------------------------
+# Heavy binaries / local EnergyPlus files
+# ------------------------------
+Eplus/
+expanded.idf
+simple_test.idf
+temp.idf
+temp_base/
+temp_test/
+simple_test_out/
+
+# ------------------------------
+# Large or non-paper directories
+# ------------------------------
+UBEM8760/
+Reference/
+PengXiangLiu/
+
+# ------------------------------
+# Raw data (keep out of OSS repo)
+# ------------------------------
+Data/Boundary/
+Data/Building/
+Data/Bus/
+Data/GoogleEarth/
+Data/Land_Use/
+Data/Population/
+Data/Price/
+Data/load_centerline/
+
+# ------------------------------
+# Processed data: keep only paper-critical tabular files
+# ------------------------------
+Data/Processed/*
+!Data/Processed/summary_xinwu.json
+!Data/Processed/Indicators/
+Data/Processed/Indicators/*
+!Data/Processed/Indicators/xinwu_urban_form_250m.csv
+!Data/Processed/BuiltEnvironment/
+Data/Processed/BuiltEnvironment/*
+!Data/Processed/BuiltEnvironment/xinwu_built_env_250m.csv
+!Data/Processed/Transportatio/
+Data/Processed/Transportatio/*
+!Data/Processed/Transportatio/xinwu_transportatio_250m.csv
+!Data/Processed/Energy/
+Data/Processed/Energy/*
+!Data/Processed/Energy/xinwu_energy_250m.csv
+!Data/Processed/Energy/xinwu_building_energy_FINAL.csv
+!Data/Processed/Energy/xinwu_building_energy_sample.csv
+
+# ------------------------------
+# Do not open-source paper figures
+# ------------------------------
+figures/
+Robust/figures/
+Mapping/**/figures/
+Mapping/compare/*.png
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.webp
+
+# ------------------------------
+# Do not open-source plotting scripts
+# ------------------------------
+scripts/plot_*.py
+scripts/export_transportatio_publication.py
+Mapping/compare/plot_compare.py
+Mapping/xai/**/run_shap_analysis.py
+Mapping/xai/**/run_form_only_shap.py
+
+# ------------------------------
+# Model artifacts / binary outputs
+# ------------------------------
+Mapping/**/lightgbm/*.txt
+Mapping/**/xgboost/*.json
+Mapping/**/xgboost/*.npy
+Mapping/**/lightgbm/lgbm_feature_importance_*.csv
+Mapping/**/lightgbm/lgbm_metrics.json
+Mapping/**/xgboost/xgb_feature_importance_*.csv
+Mapping/**/xgboost/xgb_metrics.json
+Mapping/xai/**/shap_*.csv
+Mapping/xai/**/shap_*.npy
+Mapping/xai/**/r2_vs_shap_group_share.csv
+Mapping/xai/**/linear_regression_effects.csv
+Mapping/xai/**/shap_analysis.md
+Mapping/xai/**/form_only_analysis.md
+
+# Robust generated artifacts (keep script + markdown summary)
+Robust/data/
+Robust/models/
+Robust/results/
+
+# Fonts with potential license restrictions
+assets/fonts/
+
+# ------------------------------
+# Misc
+# ------------------------------
+xgb_train.log
