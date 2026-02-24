@@ -1,0 +1,7 @@
+normalization,target_key,target,vci_threshold_estimate
+floor,cooling,Cooling load,0.225
+land,cooling,Cooling load,0.225
+floor,heating,Heating load,0.225
+land,heating,Heating load,0.225
+floor,other_electricity,Other electricity,0.225
+land,other_electricity,Other electricity,0.625

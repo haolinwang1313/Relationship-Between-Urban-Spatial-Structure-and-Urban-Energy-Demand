@@ -1,0 +1,7 @@
+Target,Normalization,R2,Notes
+Cooling load,land,0.9381,existing
+Cooling load,floor,0.4536,new
+Heating load,land,0.9682,existing
+Heating load,floor,0.3661,new
+Other electricity,land,0.8373,existing
+Other electricity,floor,0.2397,new

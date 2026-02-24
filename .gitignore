@@ -86,7 +86,6 @@ Data/Processed/Energy/*
 # Do not open-source paper figures
 # ------------------------------
 figures/
-Robust/figures/
 Mapping/**/figures/
 Mapping/compare/*.png
 *.png
@@ -94,6 +93,13 @@ Mapping/compare/*.png
 *.jpeg
 *.svg
 *.webp
+!Robust/figures/
+!Robust/figures/**
+!Robust/**/*.png
+!Robust/**/*.jpg
+!Robust/**/*.jpeg
+!Robust/**/*.svg
+!Robust/**/*.webp
 
 # ------------------------------
 # Do not open-source plotting scripts
@@ -121,10 +127,8 @@ Mapping/xai/**/linear_regression_effects.csv
 Mapping/xai/**/shap_analysis.md
 Mapping/xai/**/form_only_analysis.md
 
-# Robust generated artifacts (keep script + markdown summary)
-Robust/data/
-Robust/models/
-Robust/results/
+# Robust: do not publish markdown notes
+Robust/**/*.md
 
 # Fonts with potential license restrictions
 assets/fonts/
