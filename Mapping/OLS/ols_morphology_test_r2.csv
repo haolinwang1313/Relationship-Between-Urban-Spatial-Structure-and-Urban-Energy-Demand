@@ -1,0 +1,4 @@
+target,target_column,model,test_r2,n_train,n_test,test_size,random_state
+cooling,cooling_kwh_per_m2,OLS (Morphology-only),0.5696869970822169,3199,800,0.2,42
+heating,heating_kwh_per_m2,OLS (Morphology-only),0.5552750517174065,3199,800,0.2,42
+other,other_electricity_kwh_per_m2,OLS (Morphology-only),0.47777013259121326,3199,800,0.2,42

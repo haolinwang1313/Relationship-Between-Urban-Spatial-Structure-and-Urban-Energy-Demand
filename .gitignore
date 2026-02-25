@@ -100,6 +100,10 @@ Mapping/compare/*.png
 !Robust/**/*.jpeg
 !Robust/**/*.svg
 !Robust/**/*.webp
+# Robust/figures: ignore temporary local plotting artifacts
+Robust/figures/__pycache__/
+Robust/figures/plot_floor_area_vs_total_energy_3panels.py
+Robust/figures/floor_area_vs_total_energy_3panels.png
 
 # ------------------------------
 # Do not open-source plotting scripts
