@@ -1,0 +1,61 @@
+target,feature,mean_abs_shap,share,group
+Cooling load,Single-family residential area,6.907996654510498,0.5242971777915955,Built
+Cooling load,Multi-family residential area,2.982530355453491,0.22636550664901733,Built
+Cooling load,Industrial facility area,0.7296674251556396,0.05537966638803482,Built
+Cooling load,Vertical compactness index (VCI),0.5849504470825195,0.044396061450242996,Form
+Cooling load,Compactness index (CI),0.4606196880340576,0.034959714859724045,Form
+Cooling load,Road area,0.3234058618545532,0.02454557828605175,Built
+Cooling load,Dominant land-use intensity,0.321100652217865,0.024370620027184486,Form
+Cooling load,Land-use adjacency mix,0.3126254975795746,0.023727379739284515,Form
+Cooling load,Global street integration (GI),0.17038476467132568,0.012931715697050095,Form
+Cooling load,Local street integration (LI),0.08830293267965317,0.0067019397392869,Form
+Cooling load,Green space area,0.06655896455049515,0.00505163474008441,Built
+Cooling load,Land-use proximity,0.045532796531915665,0.003455808851867914,Form
+Cooling load,Neighborhood service area,0.03631463646888733,0.002756176982074976,Built
+Cooling load,Office area,0.03159525617957115,0.0023979893885552883,Built
+Cooling load,Commercial sales area,0.028144696727395058,0.002136101946234703,Built
+Cooling load,Land-use mix entropy (LUM),0.027250422164797783,0.0020682290196418762,Form
+Cooling load,Number of bus routes,0.018281908705830574,0.0013875444419682026,Transport
+Cooling load,Water body area,0.015989847481250763,0.001213583629578352,Built
+Cooling load,Educational facility area,0.014802876859903336,0.001123495982028544,Built
+Cooling load,Subway station influence area,0.009671489708125591,0.0007340383599512279,Transport
+Heating load,Single-family residential area,10.469009399414062,0.5742219090461731,Built
+Heating load,Multi-family residential area,4.862353801727295,0.26669859886169434,Built
+Heating load,Industrial facility area,0.6660648584365845,0.036533452570438385,Built
+Heating load,Vertical compactness index (VCI),0.66402268409729,0.036421436816453934,Form
+Heating load,Road area,0.3854442834854126,0.021141499280929565,Built
+Heating load,Land-use adjacency mix,0.27811405062675476,0.015254469588398933,Form
+Heating load,Dominant land-use intensity,0.2297818660736084,0.012603464536368847,Form
+Heating load,Compactness index (CI),0.20499391853809357,0.011243852786719799,Form
+Heating load,Global street integration (GI),0.14392487704753876,0.007894234731793404,Form
+Heating load,Commercial sales area,0.07759277522563934,0.004255939740687609,Built
+Heating load,Local street integration (LI),0.06691700220108032,0.0036703767254948616,Form
+Heating load,Green space area,0.03413409739732742,0.0018722446402534842,Built
+Heating load,Neighborhood service area,0.03346237167716026,0.0018354007042944431,Built
+Heating load,Number of bus routes,0.02777809277176857,0.0015236197505146265,Transport
+Heating load,Office area,0.02025904692709446,0.0011112024076282978,Built
+Heating load,Land-use mix entropy (LUM),0.019069941714406013,0.001045980374328792,Form
+Heating load,Land-use proximity,0.01842099241912365,0.0010103856911882758,Form
+Heating load,Educational facility area,0.015280420891940594,0.0008381263469345868,Built
+Heating load,Subway station influence area,0.008430144749581814,0.0004623908316716552,Transport
+Heating load,Water body area,0.006588882301002741,0.0003613981534726918,Built
+Other electricity,Single-family residential area,2.7184433937072754,0.2968961000442505,Built
+Other electricity,Multi-family residential area,1.8700894117355347,0.20424272119998932,Built
+Other electricity,Industrial facility area,1.7715318202972412,0.19347870349884033,Built
+Other electricity,Vertical compactness index (VCI),0.860953152179718,0.09402941167354584,Form
+Other electricity,Compactness index (CI),0.7471188306808472,0.08159694075584412,Form
+Other electricity,Road area,0.34946879744529724,0.038167402148246765,Built
+Other electricity,Dominant land-use intensity,0.1251027137041092,0.013663153164088726,Form
+Other electricity,Global street integration (GI),0.10732023417949677,0.011721030808985233,Form
+Other electricity,Land-use adjacency mix,0.10336416214704514,0.011288966983556747,Form
+Other electricity,Local street integration (LI),0.09455427527427673,0.010326790623366833,Form
+Other electricity,Water body area,0.08764732629060745,0.009572445414960384,Built
+Other electricity,Commercial sales area,0.0732082724571228,0.007995476946234703,Built
+Other electricity,Land-use proximity,0.06320814043283463,0.0069033075124025345,Form
+Other electricity,Neighborhood service area,0.037831827998161316,0.004131821449846029,Built
+Other electricity,Green space area,0.035920221358537674,0.003923044539988041,Built
+Other electricity,Office area,0.024326443672180176,0.0026568244211375713,Built
+Other electricity,Educational facility area,0.02418634667992592,0.00264152348972857,Built
+Other electricity,Subway station influence area,0.023647340014576912,0.002582655753940344,Transport
+Other electricity,Land-use mix entropy (LUM),0.02215627022087574,0.002419807715341449,Form
+Other electricity,Number of bus routes,0.01613117754459381,0.0017617742996662855,Transport

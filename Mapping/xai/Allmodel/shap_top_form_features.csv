@@ -1,0 +1,13 @@
+target,rank,feature,mean_abs_shap,share_within_form
+Cooling load,1,Vertical compactness index (VCI),0.5849504470825195,0.290909081697464
+Cooling load,2,Compactness index (CI),0.4606196880340576,0.2290765792131424
+Cooling load,3,Dominant land-use intensity,0.321100652217865,0.15969061851501465
+Cooling load,4,Land-use adjacency mix,0.3126254975795746,0.15547572076320648
+Heating load,1,Vertical compactness index (VCI),0.66402268409729,0.4085676670074463
+Heating load,2,Land-use adjacency mix,0.27811405062675476,0.1711212694644928
+Heating load,3,Dominant land-use intensity,0.2297818660736084,0.1413828730583191
+Heating load,4,Compactness index (CI),0.20499391853809357,0.1261310577392578
+Other electricity,1,Vertical compactness index (VCI),0.860953152179718,0.4053875803947449
+Other electricity,2,Compactness index (CI),0.7471188306808472,0.35178765654563904
+Other electricity,3,Dominant land-use intensity,0.1251027137041092,0.058905743062496185
+Other electricity,4,Global street integration (GI),0.10732023417949677,0.05053270235657692

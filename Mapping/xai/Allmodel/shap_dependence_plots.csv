@@ -1,0 +1,13 @@
+target,feature,figure
+Cooling load,Vertical compactness index (VCI),xai/Allmodel/figures/dependence/shap_dependence_cooling_load_Vertical compactness index (VCI).png
+Cooling load,Compactness index (CI),xai/Allmodel/figures/dependence/shap_dependence_cooling_load_Compactness index (CI).png
+Cooling load,Dominant land-use intensity,xai/Allmodel/figures/dependence/shap_dependence_cooling_load_Dominant land-use intensity.png
+Cooling load,Land-use adjacency mix,xai/Allmodel/figures/dependence/shap_dependence_cooling_load_Land-use adjacency mix.png
+Heating load,Vertical compactness index (VCI),xai/Allmodel/figures/dependence/shap_dependence_heating_load_Vertical compactness index (VCI).png
+Heating load,Land-use adjacency mix,xai/Allmodel/figures/dependence/shap_dependence_heating_load_Land-use adjacency mix.png
+Heating load,Dominant land-use intensity,xai/Allmodel/figures/dependence/shap_dependence_heating_load_Dominant land-use intensity.png
+Heating load,Compactness index (CI),xai/Allmodel/figures/dependence/shap_dependence_heating_load_Compactness index (CI).png
+Other electricity,Vertical compactness index (VCI),xai/Allmodel/figures/dependence/shap_dependence_other_electricity_Vertical compactness index (VCI).png
+Other electricity,Compactness index (CI),xai/Allmodel/figures/dependence/shap_dependence_other_electricity_Compactness index (CI).png
+Other electricity,Dominant land-use intensity,xai/Allmodel/figures/dependence/shap_dependence_other_electricity_Dominant land-use intensity.png
+Other electricity,Global street integration (GI),xai/Allmodel/figures/dependence/shap_dependence_other_electricity_Global street integration (GI).png
