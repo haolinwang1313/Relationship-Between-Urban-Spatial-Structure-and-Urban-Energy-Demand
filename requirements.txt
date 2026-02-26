@@ -1,4 +1,3 @@
-# Paper03 reproducible environment
 # Python: 3.9.12
 # Platform used for simulation: Linux (Ubuntu 22.04, x86_64)
 #
