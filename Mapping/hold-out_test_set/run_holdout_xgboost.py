@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """Run hold-out experiments for three feature groups and three targets."""
 
 from __future__ import annotations
@@ -16,7 +16,7 @@ os.environ.setdefault("OMP_NUM_THREADS", "1")
 
 try:
     import xgboost as xgb
-except ImportError as exc:  # pragma: no cover - runtime dependency guard
+except ImportError as exc:                                               
     raise SystemExit(
         "xgboost is not installed in the current environment. "
         "Install it via 'pip install xgboost' inside .venv_geo before running this script."

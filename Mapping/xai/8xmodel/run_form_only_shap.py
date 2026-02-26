@@ -165,46 +165,46 @@ def plot_dependence(
     return out_path
 
 
-# def plot_summary(
-#     shap_values: np.ndarray,
-#     feature_frame: pd.DataFrame,
-#     feature_names: List[str],
-#     out_dir: Path,
-#     target_name: str,
-# ) -> None:
-#     order = np.argsort(np.abs(shap_values).mean(axis=0))[::-1][: min(12, shap_values.shape[1])]
-#     fig, ax = plt.subplots(figsize=(4.6, 3.6))
-#     cmap = mpl.cm.coolwarm
-#     norm = mpl.colors.Normalize(vmin=feature_frame.to_numpy().min(), vmax=feature_frame.to_numpy().max())
-#     for pos, idx in enumerate(order):
-#         values = shap_values[:, idx]
-#         feature_vals = feature_frame.iloc[:, idx]
-#         jitter = (np.random.rand(len(values)) - 0.5) * 0.6
-#         ax.scatter(
-#             values,
-#             np.full(values.shape, pos) + jitter,
-#             c=cmap(norm(feature_vals)),
-#             s=10,
-#             alpha=0.55,
-#             linewidths=0,
-#         )
-#     ax.set_yticks(np.arange(len(order)))
-#     ax.set_yticklabels([feature_names[i] for i in order])
-#     ax.set_xlabel("SHAP value (kWh/m²)")
-#     ax.set_title(f"{target_name} summary", fontweight="bold", pad=6)
-#     ax.axvline(0.0, color="#666666", linewidth=0.8, linestyle="--")
-#     for spine_name in ["top", "right"]:
-#         ax.spines[spine_name].set_visible(False)
-#     for spine_name in ["bottom", "left"]:
-#         ax.spines[spine_name].set_linewidth(0.8)
-#     ax.tick_params(width=0.8, length=3)
-#     cbar = fig.colorbar(mpl.cm.ScalarMappable(norm=norm, cmap=cmap), ax=ax, pad=0.02)
-#     cbar.ax.tick_params(width=0.8, length=3, labelsize=8)
-#     cbar.set_label("Feature value")
-#     fig.tight_layout(pad=0.6)
-#     out_path = out_dir / f"summary_{target_name.replace(' ', '_').lower()}.png"
-#     fig.savefig(out_path, dpi=600, bbox_inches="tight")
-#     plt.close(fig)
+                   
+                              
+                                  
+                               
+                    
+                       
+            
+                                                                                                 
+                                                
+                            
+                                                                                                           
+                                       
+                                      
+                                                   
+                                                            
+                     
+                     
+                                                  
+                                         
+                   
+                         
+                           
+           
+                                          
+                                                           
+                                          
+                                                                      
+                                                                     
+                                         
+                                                  
+                                           
+                                                  
+                                         
+                                                                                       
+                                                           
+                                     
+                               
+                                                                                 
+                                                         
+                    
 
 def plot_summary(
     shap_values_list: List[np.ndarray],
@@ -231,7 +231,7 @@ def plot_summary(
         shap_values = shap_values_list[i]
         target_name = target_labels[i]
 
-        # rank by mean absolute SHAP
+                                    
         order = np.argsort(np.abs(shap_values).mean(axis=0))[::-1]
         max_display = min(8, shap_values.shape[1])
         order = order[:max_display]
@@ -267,7 +267,7 @@ def plot_summary(
             ax.set_yticks([])
             ax.set_xlabel("SHAP value (kWh/m²)")
 
-        # styling
+                 
         for spine_name in ["top", "right"]:
             ax.spines[spine_name].set_visible(False)
         for spine_name in ["bottom", "left"]:
@@ -275,7 +275,7 @@ def plot_summary(
 
         ax.tick_params(width=0.8, length=3)
 
-    # shared colorbar
+                     
     sm = mpl.cm.ScalarMappable(norm=norm, cmap=cmap)
     cbar = fig.colorbar(sm, ax=axes, pad=0.02)
     cbar.set_label("Feature value")

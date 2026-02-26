@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """Train XGBoost surrogate models for cooling/heating/other electricity demand."""
 
 from __future__ import annotations
@@ -16,7 +16,7 @@ os.environ.setdefault("OMP_NUM_THREADS", "1")
 
 try:
     import xgboost as xgb
-except ImportError as exc:  # pragma: no cover - handled at runtime
+except ImportError as exc:                                         
     raise SystemExit(
         "xgboost is not installed in the current environment. Install it via 'pip install xgboost' "
         "inside .venv_geo before running this script."
@@ -94,7 +94,7 @@ def train_model(X: np.ndarray, y: np.ndarray) -> tuple[dict, xgb.XGBRegressor]:
         "mae": float(np.mean([m["mae"] for m in fold_metrics])),
         "r2": float(np.mean([m["r2"] for m in fold_metrics])),
     }
-    # retrain final model on all data with slightly more estimators for stability
+                                                                                 
     final_model = xgb.XGBRegressor(
         n_estimators=600,
         max_depth=4,

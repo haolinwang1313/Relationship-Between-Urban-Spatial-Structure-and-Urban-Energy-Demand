@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """Train XGBoost models using 8 urban-form features for 3 energy targets."""
 
 from __future__ import annotations
@@ -16,9 +16,9 @@ os.environ.setdefault("OMP_NUM_THREADS", "1")
 
 try:
     import xgboost as xgb
-except ImportError as exc:  # pragma: no cover
+except ImportError as exc:                    
     raise SystemExit(
-        "xgboost is not installed. Run 'pip install xgboost' inside .venv_geo first."  # noqa: E501
+        "xgboost is not installed. Run 'pip install xgboost' inside .venv_geo first."              
     ) from exc
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]

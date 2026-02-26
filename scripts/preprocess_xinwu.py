@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """
 Preprocess spatial datasets for Xinwu District, Wuxi.
 
@@ -37,7 +37,7 @@ import pandas as pd
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = PROJECT_ROOT / "Data"
 PROCESSED_DIR = RAW_DIR / "Processed"
-TARGET_CRS = "EPSG:32650"  # UTM zone 50N, covering Wuxi
+TARGET_CRS = "EPSG:32650"                               
 BOUNDARY_PLACE = "Xinwu District, Wuxi, Jiangsu, China"
 BOUNDARY_RAW_PATH = PROCESSED_DIR / "Boundary" / "xinwu_boundary_wgs84.geojson"
 BOUNDARY_TARGET_PATH = PROCESSED_DIR / "Boundary" / "xinwu_boundary_32650.geojson"
@@ -70,7 +70,7 @@ def fetch_boundary() -> Tuple[gpd.GeoDataFrame, gpd.GeoDataFrame, gpd.GeoDataFra
         boundary_wgs84.to_file(BOUNDARY_RAW_PATH, driver="GeoJSON")
 
     boundary_utm = boundary_wgs84.to_crs(TARGET_CRS)
-    # 2 km buffer to make bounding-box based reads robust
+                                                         
     search_geom = boundary_utm.buffer(2000).to_frame(name="geometry").set_crs(TARGET_CRS)
     search_geom = search_geom.to_crs("EPSG:4326")
     boundary_utm.to_file(BOUNDARY_TARGET_PATH, driver="GeoJSON")
@@ -96,7 +96,7 @@ def process_buildings(boundary: gpd.GeoDataFrame, search_geom: gpd.GeoDataFrame)
     buildings = gpd.clip(buildings, search_geom)
     buildings = buildings.loc[~buildings.geometry.is_empty].copy()
 
-    # Use the exact district outline rather than the buffered search area
+                                                                         
     buildings = gpd.clip(buildings, boundary)
     buildings = buildings.to_crs(TARGET_CRS)
     buildings["footprint_area_m2"] = buildings.geometry.area
@@ -259,6 +259,6 @@ def main() -> None:
 if __name__ == "__main__":
     try:
         main()
-    except Exception as exc:  # pragma: no cover - interactive error bubble-up
+    except Exception as exc:                                                  
         print(f"Error: {exc}", file=sys.stderr)
         sys.exit(1)

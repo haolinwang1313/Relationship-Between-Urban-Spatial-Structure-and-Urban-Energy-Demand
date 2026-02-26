@@ -71,7 +71,7 @@ TRANSPORT_FEATURES = [
 ]
 
 DISPLAY_NAME_MAP = {
-    # ---- Form (8) ----
+                        
     "ci_norm": "Compactness index (CI)",
     "vci_norm": "Vertical compactness index (VCI)",
     "lum_norm": "Land-use mix entropy (LUM)",
@@ -80,7 +80,7 @@ DISPLAY_NAME_MAP = {
     "lum_proximity_norm": "Land-use proximity",
     "gi_norm": "Global street integration (GI)",
     "li_norm": "Local street integration (LI)",
-    # ---- Built environment (10) ----
+                                      
     "single_family_ha": "Single-family residential area",
     "multi_family_ha": "Multi-family residential area",
     "facility_neighborhood_ha": "Neighborhood service area",
@@ -91,7 +91,7 @@ DISPLAY_NAME_MAP = {
     "parks_green_ha": "Green space area",
     "water_area_ha": "Water body area",
     "road_area_ha": "Road area",
-    # ---- Transport (2) ----
+                             
     "subway_influence_ha": "Subway station influence area",
     "bus_routes_cnt": "Number of bus routes",
 }

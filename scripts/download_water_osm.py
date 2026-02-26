@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """Fetch OSM water polygons for Xinwu boundary and save to processed data."""
 
 from pathlib import Path

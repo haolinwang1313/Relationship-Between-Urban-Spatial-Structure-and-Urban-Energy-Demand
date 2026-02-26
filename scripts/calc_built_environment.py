@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """Recompute built-environment metrics (total floor area) on 250 m grid."""
 
 from __future__ import annotations
@@ -22,7 +22,7 @@ OUTPUT_DIR = PROCESSED_DIR / "BuiltEnvironment"
 OUTPUT_CSV = OUTPUT_DIR / "xinwu_built_env_250m.csv"
 OUTPUT_GPKG = OUTPUT_DIR / "xinwu_built_env_250m.gpkg"
 
-AVG_FLOOR_HEIGHT = 3.3  # m
+AVG_FLOOR_HEIGHT = 3.3     
 PARK_CLASSES = [10]
 
 BUILDING_TYPE_RULES: Dict[str, Callable[[pd.DataFrame], pd.Series]] = {

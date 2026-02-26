@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """OLS baseline on morphology features with fixed hold-out split."""
 
 from __future__ import annotations

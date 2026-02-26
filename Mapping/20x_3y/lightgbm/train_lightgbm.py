@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """Train LightGBM surrogate models for cooling/heating/other electricity demand."""
 
 from __future__ import annotations
@@ -16,7 +16,7 @@ os.environ.setdefault("OMP_NUM_THREADS", "1")
 
 try:
     import lightgbm as lgb
-except ImportError as exc:  # pragma: no cover
+except ImportError as exc:                    
     raise SystemExit(
         "lightgbm is not installed in the current environment. Install it via 'pip install lightgbm' "
         "inside .venv_geo before running this script."
@@ -110,7 +110,7 @@ def train_model(X: np.ndarray, y: np.ndarray) -> tuple[dict, lgb.Booster]:
         "mae": float(np.mean([m["mae"] for m in fold_metrics])),
         "r2": float(np.mean([m["r2"] for m in fold_metrics])),
     }
-    # retrain final model
+                         
     final_params = params.copy()
     train_full = lgb.Dataset(X, label=y)
     booster = lgb.train(final_params, train_full, num_boost_round=gbm.best_iteration or 600)

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """Generate simplified EnergyPlus models per building and aggregate energy outputs.
 
 The script uses default prototype assumptions (config/energy_prototypes.json) to
@@ -340,7 +340,7 @@ Schedule:Compact,
   For: AllDays,
   Until: 24:00,1.0;
 """
-#渗透，整年的透风量不变
+            
 ACTIVITY_SCHEDULE = """
 Schedule:Compact,
   {name},
@@ -924,7 +924,7 @@ def main() -> None:
             }
             record.update(energy_stats)
             outputs.append(record)
-        except Exception as exc:  # pragma: no cover - runtime safety
+        except Exception as exc:                                     
             print(f"Simulation failed for building {b_id}: {exc}", file=sys.stderr)
             outputs.append({
                 "building_id": b_id,

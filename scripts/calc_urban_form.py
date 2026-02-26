@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """
 Compute key urban form indicators for Xinwu District, Wuxi.
 
@@ -40,7 +40,7 @@ ROAD_INTEGRATION_PATH = PROCESSED_DIR / "Road" / "xinwu_road_integration.gpkg"
 GRID_DIR = PROCESSED_DIR / "Grids"
 INDICATOR_DIR = PROCESSED_DIR / "Indicators"
 
-MAIN_CELL_SIZE = 250.0  # meters
+MAIN_CELL_SIZE = 250.0          
 SUB_CELL_SIZE = 25.0
 
 if MAIN_CELL_SIZE % SUB_CELL_SIZE != 0:
@@ -72,7 +72,7 @@ AREA_COLUMNS = {cat: f"area_{cat}_m2" for cat in USE_CATEGORIES}
 OTHER_AREA_COLUMN = "area_other_m2"
 OTHER_LABEL = "other"
 
-ADJ_DELTAS = [(1, 0), (0, 1)]  # rook neighbors, counted once
+ADJ_DELTAS = [(1, 0), (0, 1)]                                
 
 
 @dataclass
@@ -212,11 +212,11 @@ def compute_ci_vci(buildings_pts: gpd.GeoDataFrame) -> pd.DataFrame:
             results.append({"grid_id": grid_id, "ci": math.nan, "vci": math.nan})
             continue
         coords = np.column_stack((group.geometry.x.values, group.geometry.y.values))
-        dx = (coords[:, 0][:, None] - coords[:, 0][None, :]) / 1000.0  # convert to km
+        dx = (coords[:, 0][:, None] - coords[:, 0][None, :]) / 1000.0                 
         dy = (coords[:, 1][:, None] - coords[:, 1][None, :]) / 1000.0
         dist2 = dx**2 + dy**2
         np.fill_diagonal(dist2, np.nan)
-        areas = group["footprint_area_m2"].values / 10_000.0  # convert m2 -> ha
+        areas = group["footprint_area_m2"].values / 10_000.0                    
         heights = group["height_m"].values
         if np.isnan(heights).all():
             heights = np.zeros_like(areas)
@@ -227,7 +227,7 @@ def compute_ci_vci(buildings_pts: gpd.GeoDataFrame) -> pd.DataFrame:
         ci_value = _pairwise_average(area_products, dist2)
         volumes = areas * heights
         volume_products = np.outer(volumes, volumes)
-        dz = ((heights / 2.0)[:, None] - (heights / 2.0)[None, :]) / 1000.0  # convert to km
+        dz = ((heights / 2.0)[:, None] - (heights / 2.0)[None, :]) / 1000.0                 
         dist3 = np.sqrt(dist2 + dz**2)
         np.fill_diagonal(dist3, np.nan)
         vci_value = _pairwise_average(volume_products, dist3)

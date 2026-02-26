@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """Train LightGBM surrogate models with 8 urban-form features."""
 
 from __future__ import annotations
@@ -16,9 +16,9 @@ os.environ.setdefault("OMP_NUM_THREADS", "1")
 
 try:
     import lightgbm as lgb
-except ImportError as exc:  # pragma: no cover
+except ImportError as exc:                    
     raise SystemExit(
-        "lightgbm is not installed; run 'pip install lightgbm' in .venv_geo."  # noqa: E501
+        "lightgbm is not installed; run 'pip install lightgbm' in .venv_geo."              
     ) from exc
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """
 Compute alternative GI/LI variants using expanded road networks.
 
@@ -128,7 +128,7 @@ def compute_closeness(
     for node, idx_row in zip(nodes_subset, range(len(target_idx))):
         idx_self = node_to_idx[node]
 
-        # Global closeness
+                          
         row = dist_global[idx_row]
         finite = np.isfinite(row)
         finite[idx_self] = False
@@ -139,7 +139,7 @@ def compute_closeness(
             total = row[finite].sum()
             global_cc[node] = (reachable) / total if total > 0 else 0.0
 
-        # Local closeness
+                         
         row_local = dist_local[idx_row]
         finite_local = np.isfinite(row_local)
         finite_local[idx_self] = False
@@ -216,7 +216,7 @@ def compute_integration(
     graph, roads = build_graph(network_path)
     print(f"Graph nodes: {graph.number_of_nodes()}, edges: {graph.number_of_edges()}")
 
-    # Determine which nodes to retain (within buffered target boundary)
+                                                                       
     target_nodes = [
         node for node in graph.nodes if Point(node).within(target_geom)
     ]
@@ -269,14 +269,14 @@ def compute_integration(
     }
     variant_metrics = variant_metrics.rename(columns=rename_map)
 
-    # Persist lines
+                   
     out_line = PROCESSED_DIR / "Road" / f"xinwu_road_integration_{tag}.gpkg"
     if out_line.exists():
         out_line.unlink()
     edges.to_file(out_line, layer="integration_lines", driver="GPKG")
     print(f"Saved integration lines to {out_line}")
 
-    # Update CSV indicators
+                           
     csv_df = pd.read_csv(CSV_PATH)
     for col in rename_map.values():
         if col in csv_df.columns:
@@ -287,7 +287,7 @@ def compute_integration(
     csv_df.to_csv(CSV_PATH, index=False)
     print(f"Updated CSV indicators at {CSV_PATH}")
 
-    # Update GeoPackage layer
+                             
     grid_gdf = gpd.read_file(GRID_OUTPUT_PATH, layer=GRID_OUTPUT_LAYER)
     for col in rename_map.values():
         if col in grid_gdf.columns:

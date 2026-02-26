@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """Compute transportation accessibility indicators on the 250 m grid."""
 
 from __future__ import annotations
@@ -22,7 +22,7 @@ BUS_PATH = PROCESSED_DIR / "Bus" / "xinwu_bus_network.gpkg"
 BUS_STOP_LAYER = "stops"
 BOUNDARY_PATH = PROCESSED_DIR / "Boundary" / "xinwu_boundary_32650.geojson"
 
-ROAD_HALF_WIDTH_M = 8.0  # 16 m full width buffer to approximate paved corridors
+ROAD_HALF_WIDTH_M = 8.0                                                         
 SUBWAY_BUFFER_RADIUS_M = 250.0
 
 OUTPUT_GPKG = TRANSPORT_DIR / "xinwu_transportatio_250m.gpkg"

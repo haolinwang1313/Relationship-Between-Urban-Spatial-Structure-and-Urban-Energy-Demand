@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                      
 """Denominator sensitivity robustness check (land-normalized vs floor-normalized EUI).
 
 This script builds two matched datasets on the same grid sample (FA > 0):
@@ -195,7 +195,7 @@ def build_matched_datasets() -> pd.DataFrame:
     if df["floor_area_total_m2"].isna().any():
         raise ValueError("Found NaN floor area values after merge.")
 
-    # Keep only grids with buildings (requested robustness setting).
+                                                                    
     df = df[df["floor_area_total_m2"] > 0].copy()
 
     for _, spec in TARGET_SPECS.items():
@@ -327,7 +327,7 @@ def estimate_threshold_from_bins(x: np.ndarray, y: np.ndarray, bins: int = VCI_B
     if len(bin_df) < 9:
         return float("nan"), bin_df
 
-    # Robust "knee" estimate: pick the split that minimizes two-line SSE.
+                                                                         
     centers = bin_df["center"].to_numpy(dtype=np.float64)
     means = bin_df["mean_shap"].to_numpy(dtype=np.float64)
     min_seg = 4
@@ -578,7 +578,7 @@ def make_summary_tables(perf_df: pd.DataFrame, shap_group_df: pd.DataFrame) -> N
     )
     summary.to_csv(RESULTS_DIR / "performance_summary_xgboost.csv", index=False)
 
-    # Morphology share comparison against original Allmodel SHAP summary.
+                                                                         
     original_shap = pd.read_csv(ORIGINAL_SHAP_GROUP)
     target_map = {
         "Cooling load": "cooling",
