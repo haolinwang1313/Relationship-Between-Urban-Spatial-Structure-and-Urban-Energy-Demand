@@ -1,0 +1,30 @@
+# Paper03 reproducible environment
+# Tested with Python 3.9.12
+#
+# Install:
+#   python -m venv .venv
+#   source .venv/bin/activate
+#   pip install --upgrade pip
+#   pip install -r requirements.txt
+#
+# Note:
+# - Building energy simulation scripts additionally require a local EnergyPlus installation.
+# - Geo packages may require system libraries (GDAL/PROJ/GEOS) depending on platform.
+
+numpy==2.0.2
+pandas==2.3.3
+scipy==1.13.1
+scikit-learn==1.6.1
+
+xgboost==1.7.6
+lightgbm==4.6.0
+
+matplotlib==3.9.4
+
+networkx==3.2.1
+geopandas==1.0.1
+shapely==2.0.7
+osmnx==2.0.6
+momepy==0.6.0
+
+geomeppy==0.11.8
