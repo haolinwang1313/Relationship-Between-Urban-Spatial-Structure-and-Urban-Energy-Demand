@@ -1,14 +1,24 @@
 # Paper03 reproducible environment
-# Tested with Python 3.9.12
+# Python: 3.9.12
+# Platform used for simulation: Linux (Ubuntu 22.04, x86_64)
 #
-# Install:
+# Building simulation stack (non-pip, must be installed locally):
+# - EnergyPlus CLI: 24.1.0 (build 9d7789a3ac)
+#   Path used in project scripts:
+#   Eplus/EnergyPlus-24.1.0-9d7789a3ac-Linux-Ubuntu22.04-x86_64
+# - IDF schema version: 24.1
+#   Source file: config/base_energy_model.idf
+# - Simulation timestep: 4 (Timestep, 4;)
+# - Default weather file:
+#   CHN_JS_Wuxi_Proxy_583580.epw
+#
+# Install Python dependencies:
 #   python -m venv .venv
 #   source .venv/bin/activate
 #   pip install --upgrade pip
 #   pip install -r requirements.txt
 #
 # Note:
-# - Building energy simulation scripts additionally require a local EnergyPlus installation.
 # - Geo packages may require system libraries (GDAL/PROJ/GEOS) depending on platform.
 
 numpy==2.0.2
