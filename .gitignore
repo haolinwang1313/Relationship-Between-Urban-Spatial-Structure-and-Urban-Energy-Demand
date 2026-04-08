@@ -18,6 +18,7 @@ cache/
 logs/
 work_logs/
 worklogs/
+visualization/
 *.log
 *.tmp
 *.bak
