@@ -21,7 +21,6 @@ The current archive includes:
 
 The archived hold-out results indicate that the 20-feature XGBoost model achieves test `R²` values of **0.937** for cooling, **0.974** for heating, and **0.849** for other electricity demand on the released split.
 
-![Grid-level energy loads in Xinwu District](figures/energy/xinwu_energy_250m.png)
 
 ## Repository Structure
 
